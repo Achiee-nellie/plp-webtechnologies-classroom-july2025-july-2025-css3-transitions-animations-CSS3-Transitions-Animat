@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Web Experience - CSS & JavaScript Assignment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <h1 class="fade-in-title">Interactive CSS & JavaScript Experience</h1>
+        <p class="subtitle slide-in-left">Bringing web pages to life with animations and functions</p>
+    </header>
+
+    <!--CSS Animations Demo -->
+    <section class="section" id="css-demo">
+        <h2>Part 1: CSS3 Transitions and Animations</h2>
+        
+        <!-- Hover Effects -->
+        <div class="demo-group">
+            <h3>Button Hover Effects</h3>
+            <button class="btn btn-primary">Hover Me!</button>
+            <button class="btn btn-secondary">Pulse Effect</button>
+            <button class="btn btn-accent">Slide Effect</button>
+        </div>
+
+        <!-- Continuous Animations -->
+        <div class="demo-group">
+            <h3>Continuous Animations</h3>
+            <div class="spinner"></div>
+            <div class="floating-box">Floating Box</div>
+            <div class="color-shift">Color Shifting</div>
+        </div>
+
+        <!-- Transform Animations -->
+        <div class="demo-group">
+            <h3>Transform Effects</h3>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">Front</div>
+                    <div class="flip-card-back">Back</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript Functions Demo -->
+    <section class="section" id="js-demo">
+        <h2>Part 2: JavaScript Functions - Scope, Parameters & Return Values</h2>
+        
+        <div class="demo-group">
+            <h3>Function Demonstrations</h3>
+            <div class="controls">
+                <input type="number" id="numberInput" placeholder="Enter a number" value="5">
+                <button onclick="demonstrateFunctions()">Test Functions</button>
+            </div>
+            <div id="functionOutput" class="output-box"></div>
+        </div>
+
+        <div class="demo-group">
+            <h3>Scope Demonstration</h3>
+            <button onclick="showScopeDemo()">Show Scope Examples</button>
+            <div id="scopeOutput" class="output-box"></div>
+        </div>
+    </section>
+
+    <!-- Combined CSS + JavaScript -->
+    <section class="section" id="combined-demo">
+        <h2>Part 3: CSS Animations Triggered by JavaScript</h2>
+        
+        <!-- Interactive Animation Controls -->
+        <div class="demo-group">
+            <h3>Interactive Animation Box</h3>
+            <div class="animation-controls">
+                <button onclick="animateBox('bounce')">Bounce</button>
+                <button onclick="animateBox('spin')">Spin</button>
+                <button onclick="animateBox('shake')">Shake</button>
+                <button onclick="animateBox('glow')">Glow</button>
+                <button onclick="resetBox()">Reset</button>
+            </div>
+            <div id="animationBox" class="animation-box">Animate Me!</div>
+        </div>
+
+        <!-- Modal/Popup Demo -->
+        <div class="demo-group">
+            <h3>Dynamic Modal</h3>
+            <button onclick="showModal('Welcome!', 'This modal slides in with CSS animations triggered by JavaScript!')">Show Modal</button>
+        </div>
+
+        <!-- Loading Animation Demo -->
+        <div class="demo-group">
+            <h3>Dynamic Loading Animation</h3>
+            <button onclick="simulateLoading()">Start Loading</button>
+            <div id="loadingContainer" class="loading-container hidden">
+                <div class="loading-spinner"></div>
+                <p>Loading...</p>
+            </div>
+        </div>
+
+        <!-- Card Flip Interaction -->
+        <div class="demo-group">
+            <h3>Interactive Card Collection</h3>
+            <div class="card-container">
+                <div class="interactive-card" onclick="flipCard(this)">
+                    <div class="card-inner">
+                        <div class="card-front">Card 1<br>Click to flip</div>
+                        <div class="card-back">JavaScript<br>Triggered!</div>
+                    </div>
+                </div>
+                <div class="interactive-card" onclick="flipCard(this)">
+                    <div class="card-inner">
+                        <div class="card-front">Card 2<br>Click to flip</div>
+                        <div class="card-back">CSS<br>Animation!</div>
+                    </div>
+                </div>
+                <div class="interactive-card" onclick="flipCard(this)">
+                    <div class="card-inner">
+                        <div class="card-front">Card 3<br>Click to flip</div>
+                        <div class="card-back">Perfect<br>Combo!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Structure -->
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close" onclick="hideModal()">&times;</span>
+            <h3 id="modalTitle"></h3>
+            <p id="modalText"></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Interactive Web Experience - CSS & JavaScript Assignment</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
